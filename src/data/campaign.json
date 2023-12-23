@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "image": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/04/Blueberry-Extravaganza-Cake.jpg",
+        "campaign": "Blueberry cake Campaign",
+        "created": "Created on 14 july",
+        "range": "25 jul 2020 - 01 Aug 2020",
+        "clicks": 300,
+        "budget": "INR. 3,400",
+        "location": "Chennai",
+        "platform": "facebook",
+        "status": "Live Now"
+    },
+    {
+        "id": 2,
+        "image": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/04/Blueberry-Extravaganza-Cake.jpg",
+        "campaign": "Chocolate cake campaign",
+        "created": "Created on 20 jan",
+        "range": "25 jul 2020 - 01 Aug 2020",
+        "clicks": 210,
+        "budget": "INR. 3,400",
+        "location": "Coimbatore",
+        "platform": "facebook",
+        "status": "Paused"
+    },
+    {
+        "id": 3,
+        "image": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/04/Blueberry-Extravaganza-Cake.jpg",
+        "campaign": "Browine cake campaign",
+        "created": "Created on 12 jun",
+        "range": "25 jul 2020 - 01 Aug 2020",
+        "clicks": 123,
+        "budget": "INR. 3,400",
+        "location": "Erode",
+        "platform": "facebook",
+        "status": "Exhausted"
+    },
+    {
+        "id": 4,
+        "image": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/04/Blueberry-Extravaganza-Cake.jpg",
+        "campaign": "Pumpkin cake campaign",
+        "created": "Created on 28 feb",
+        "range": "25 jul 2020 - 01 Aug 2020",
+        "clicks": 435,
+        "budget": "INR. 3,400",
+        "location": "Coimbatore",
+        "platform": "youtube",
+        "status": "Live Now"
+    },
+    {
+        "id": 5,
+        "image": "https://shreemsweetsandbakery.com/wp-content/uploads/2021/04/Blueberry-Extravaganza-Cake.jpg",
+        "campaign": "Cup cakes campaign",
+        "created": "Created on 10 july",
+        "range": "25 jul 2020 - 01 Aug 2020",
+        "clicks": 123,
+        "budget": "INR. 3,400",
+        "location": "Coimbatore",
+        "platform": "google",
+        "status": "Live Now"
+    }
+]
