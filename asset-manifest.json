@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/zocket/static/css/main.ff121f70.css",
+    "main.js": "/zocket/static/js/main.b6101a56.js",
+    "static/media/Eudoxus.ttf": "/zocket/static/media/Eudoxus.17de35e80412f748c6b8.ttf",
+    "static/media/cake4.png": "/zocket/static/media/cake4.eb26b984194caf822478.png",
+    "static/media/cake2.png": "/zocket/static/media/cake2.ad03a090cb2ee1a4c6ed.png",
+    "static/media/cake3.png": "/zocket/static/media/cake3.8f35d17229adf2d48893.png",
+    "static/media/cake1.png": "/zocket/static/media/cake1.f29b7d55be52c6f8c3d1.png",
+    "index.html": "/zocket/index.html",
+    "main.ff121f70.css.map": "/zocket/static/css/main.ff121f70.css.map",
+    "main.b6101a56.js.map": "/zocket/static/js/main.b6101a56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff121f70.css",
+    "static/js/main.b6101a56.js"
+  ]
+}
