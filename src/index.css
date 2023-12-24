@@ -649,3 +649,8 @@ body {
   color: hsla(216, 100%, 53%, 1);
   border: none;
 }
+
+.selected {
+  background-color: white;
+  border: 1.5px solid hsla(216, 100%, 53%, 1);
+}

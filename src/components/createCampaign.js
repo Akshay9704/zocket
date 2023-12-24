@@ -27,6 +27,7 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
     const [currentStep, setCurrentStep] = useState(1);
     const [showLocation, setShowLocation] = useState(true);
     const [showRadius, setShowRadius] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const navigate = useNavigate();
 
@@ -51,8 +52,9 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
         }
     };
 
-    const optionHandler = (campaignType) => {
+    const optionHandler = (campaignType, index) => {
         setCampaigns(campaignType);
+        setSelectedOption(index);
     }
 
     const productHandler = (selectedProduct) => {
@@ -119,21 +121,21 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
                         <h3>What you want to do? <span>(Step 1 of 4)</span></h3>
                         <div className="create-box">
                             {/* Row 1 */}
-                            <div onClick={() => optionHandler('google')} className="create-options">
+                            <div onClick={() => optionHandler('google', 1)} className={`create-options ${selectedOption === 1 ? 'selected' : ''}`}>
                                 <img src={Phone} alt="phone" />
                                 <div>
                                     <h3>Get Leads as calls</h3>
                                     <p>Reach broad audience and get leads through calls</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('facebook')} className="create-options">
+                            <div onClick={() => optionHandler('facebook', 2)} className={`create-options ${selectedOption === 2 ? 'selected' : ''}`}>
                                 <img src={Message} alt="message" />
                                 <div>
                                     <h3>Get Leads as facebook messages</h3>
                                     <p>Get more FB messages from Leads</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('facebook')} className="create-options">
+                            <div onClick={() => optionHandler('facebook', 3)} className={`create-options ${selectedOption === 3 ? 'selected' : ''}`}>
                                 <img src={Person} alt="person" />
                                 <div>
                                     <h3>Increase page followers</h3>
@@ -141,21 +143,21 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
                                 </div>
                             </div>
                             {/* Row 2 */}
-                            <div onClick={() => optionHandler('facebook')} className="create-options">
+                            <div onClick={() => optionHandler('facebook', 4)} className={`create-options ${selectedOption === 4 ? 'selected' : ''}`}>
                                 <img src={People} alt="people" />
                                 <div>
                                     <h3>Get Customer Leads</h3>
                                     <p>Encourage customers to take action</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('youtube')} className="create-options">
+                            <div onClick={() => optionHandler('youtube', 5)} className={`create-options ${selectedOption === 5 ? 'selected' : ''}`}>
                                 <img src={Eye} alt="eye" />
                                 <div>
                                     <h3>Get more youtube views</h3>
                                     <p>Increase organic views by obtaining user attention</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('instagram')} className="create-options">
+                            <div onClick={() => optionHandler('instagram', 6)} className={`create-options ${selectedOption === 6 ? 'selected' : ''}`}>
                                 <img src={Click} alt="click" />
                                 <div>
                                     <h3>Get more website traffic</h3>
@@ -163,21 +165,21 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
                                 </div>
                             </div>
                             {/* Row 3 */}
-                            <div onClick={() => optionHandler('google')} className="create-options">
+                            <div onClick={() => optionHandler('google', 7)} className={`create-options ${selectedOption === 7 ? 'selected' : ''}`}>
                                 <img src={Shop} alt="shop" />
                                 <div>
                                     <h3>Increase Live store traffic</h3>
                                     <p>Drive visits to local stores, restaurants & Dealerships</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('youtube')} className="create-options">
+                            <div onClick={() => optionHandler('youtube', 8)} className={`create-options ${selectedOption === 8 ? 'selected' : ''}`}>
                                 <img src={Save} alt="save" />
                                 <div>
                                     <h3>Increase your App installs</h3>
                                     <p>Get more installs, interactions for your app</p>
                                 </div>
                             </div>
-                            <div onClick={() => optionHandler('google')} className="create-options">
+                            <div onClick={() => optionHandler('google', 9)} className={`create-options ${selectedOption === 9 ? 'selected' : ''}`}>
                                 <img src={Note} alt="note" />
                                 <div>
                                     <h3>Increase the catalogue sales</h3>
@@ -191,8 +193,8 @@ const CreateCampaign = ({ campaigns, setCampaigns, product, setProduct, campaign
                     <div>
                         <h3>Choose product <span>(Step 2 of 4)</span></h3>
                         <div className="create-box">
-                            {products.map((item, index) => (
-                                <div className="create-options" key={index} onClick={() => productHandler({ image: item.image, name: item.product, price: item.price })}>
+                            {products.map((item) => (
+                                <div className="create-options" onClick={() => productHandler({ image: item.image, name: item.product, price: item.price })}>
                                     <img src={item.image} alt="item" />
                                     <div>
                                         <h3 className="product">{item.product}</h3>

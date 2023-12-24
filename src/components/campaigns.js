@@ -9,7 +9,7 @@ import Google from "../assets/google.png";
 import Youtube from "../assets/youtube.png"
 import Data from "../data/campaign.json";
 
-const Campaign = ({campaignList}) => {
+const Campaign = ({ campaignList }) => {
     const [campaignPage, setCampaignPage] = useState([]);
     const [isOn, setIsOn] = useState(false);
 
@@ -117,9 +117,9 @@ const Campaign = ({campaignList}) => {
                                 <tr key={index}>
                                     <td><input type="checkbox" /></td>
                                     <td>
-                                    <div className={`slider-button ${isOn ? 'on' : 'off'}`} onClick={handleToggle} id={`slider-${index}`}>
-                                        <div className="slider-circle"></div>
-                                    </div>
+                                        <div className={`slider-button ${isOn ? 'on' : 'off'}`} onClick={handleToggle} id={`slider-${index}`}>
+                                            <div className="slider-circle"></div>
+                                        </div>
                                     </td>
                                     <td className='campaign-details'>
                                         <img src={item.image} alt="Campaign Image" />
@@ -148,9 +148,9 @@ const Campaign = ({campaignList}) => {
                                 <tr key={index}>
                                     <td><input type="checkbox" /></td>
                                     <td>
-                                    <div className={`slider-button ${isOn ? 'on' : 'off'}`} onClick={handleToggle} id={`slider-${index}`}>
-                                        <div className="slider-circle"></div>
-                                    </div>
+                                        <div className={`slider-button ${isOn ? 'on' : 'off'}`} onClick={handleToggle} id={`slider-${index}`}>
+                                            <div className="slider-circle"></div>
+                                        </div>
                                     </td>
                                     <td className='campaign-details'>
                                         <img src={item.product.image} alt="Campaign Image" />
@@ -171,7 +171,10 @@ const Campaign = ({campaignList}) => {
                                     </td>
                                     <td>
                                         <button><img src={Edit} alt="" /></button>
-                                        <button><img src={Delete} alt="" /></button>
+                                        <button onClick={() => {
+                                            removeHandler(item.id);
+                                        }}
+                                        ><img src={Delete} alt="" /></button>
                                     </td>
                                 </tr>
                             ))}
